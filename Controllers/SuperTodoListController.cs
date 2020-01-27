@@ -21,5 +21,11 @@ namespace SuperTodoList.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> Lists()
+        {
+            var lists = _context.ListsTodo.ToList();
+            return View(lists);
+        }
     }
 }
