@@ -11,6 +11,10 @@ namespace SuperTodoList.Models
         public DbSet<Action> Actions { get; set; }
         public DbSet<ListTodo> ListsTodo { get; set; }
 
+        public SuperTodoListContext(DbContextOptions<SuperTodoListContext> options)
+            : base(options)
+        { }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ItemOfList>()
