@@ -9,7 +9,7 @@ namespace SuperTodoList.Models
     public class SuperTodoListContext : DbContext
     {
         public DbSet<Action> Actions { get; set; }
-        public DbSet<ListTodo> ListsOfActions { get; set; }
+        public DbSet<ListTodo> ListsTodo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -18,12 +18,12 @@ namespace SuperTodoList.Models
 
             modelBuilder.Entity<ItemOfList>()
                 .HasOne(t => t.ListOfActions)
-                .WithMany(t => t.ListItems)
+                .WithMany(t => t.Items)
                 .HasForeignKey(k => k.ListId);
 
             modelBuilder.Entity<ItemOfList>()
                 .HasOne(t => t.Action)
-                .WithMany(t => t.ListItems)
+                .WithMany(t => t.ItemsOfLists)
                 .HasForeignKey(k => k.ActionId);
         }
     }

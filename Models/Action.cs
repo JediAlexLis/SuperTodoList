@@ -10,6 +10,6 @@ namespace SuperTodoList.Models
         public int Id { get; set; }
         public string Description { get; set; }
 
-        public List<ItemOfList> ListItems { get; set; }
+        public List<ItemOfList> ItemsOfLists { get; set; }
     }
 }
