@@ -13,15 +13,15 @@ namespace SuperTodoList.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ListItem>()
+            modelBuilder.Entity<ItemOfList>()
                 .HasKey(k => new { k.ListId, k.ActionId, k.Position });
 
-            modelBuilder.Entity<ListItem>()
+            modelBuilder.Entity<ItemOfList>()
                 .HasOne(t => t.ListOfActions)
                 .WithMany(t => t.ListItems)
                 .HasForeignKey(k => k.ListId);
 
-            modelBuilder.Entity<ListItem>()
+            modelBuilder.Entity<ItemOfList>()
                 .HasOne(t => t.Action)
                 .WithMany(t => t.ListItems)
                 .HasForeignKey(k => k.ActionId);
