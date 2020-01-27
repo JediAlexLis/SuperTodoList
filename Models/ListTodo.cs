@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SuperTodoList.Models
 {
-    public class ListOfActions
+    public class ListTodo
     {
         public int Id { get; set; }
         public string Name { get; set; }

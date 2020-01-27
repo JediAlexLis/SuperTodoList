@@ -9,7 +9,7 @@ namespace SuperTodoList.Models
     public class SuperTodoListContext : DbContext
     {
         public DbSet<Action> Actions { get; set; }
-        public DbSet<ListOfActions> ListsOfActions { get; set; }
+        public DbSet<ListTodo> ListsOfActions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
