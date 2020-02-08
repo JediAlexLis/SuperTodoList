@@ -27,5 +27,11 @@ namespace SuperTodoList.Controllers
             var lists = _context.ListsTodo.ToList();
             return View(lists);
         }
+
+        public async Task<IActionResult> Actions()
+        {
+            var actions = _context.Actions.ToList();
+            return View(actions);
+        }
     }
 }
