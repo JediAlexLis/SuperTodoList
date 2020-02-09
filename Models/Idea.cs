@@ -9,7 +9,7 @@ namespace SuperTodoList.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
-        public List<ItemOfList> ItemsOfLists { get; set; }
+        public int? Position { get; set; }
+        public int? ParentId { get; set; }
     }
 }
