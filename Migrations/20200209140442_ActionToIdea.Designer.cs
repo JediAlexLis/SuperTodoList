@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperTodoList.Models;
 
 namespace SuperTodoList.Migrations
 {
     [DbContext(typeof(SuperTodoListContext))]
-    partial class SuperTodoListContextModelSnapshot : ModelSnapshot
+    [Migration("20200209140442_ActionToIdea")]
+    partial class ActionToIdea
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
