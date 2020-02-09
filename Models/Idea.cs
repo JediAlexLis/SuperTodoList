@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace SuperTodoList.Models
 {
-    public class Action
+    public class Idea
     {
         public int Id { get; set; }
-        public string Description { get; set; }
+        public string Name { get; set; }
 
         public List<ItemOfList> ItemsOfLists { get; set; }
     }
