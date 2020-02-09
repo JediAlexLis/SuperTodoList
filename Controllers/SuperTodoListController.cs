@@ -22,16 +22,14 @@ namespace SuperTodoList.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Lists()
+        public async Task<IActionResult> Structure()
         {
-            var lists = _context.ListsTodo.ToList();
-            return View(lists);
+            return View();
         }
 
-        public async Task<IActionResult> Actions()
+        public async Task<IActionResult> Ideas()
         {
-            var actions = _context.Actions.ToList();
-            return View(actions);
+            return View();
         }
     }
 }
